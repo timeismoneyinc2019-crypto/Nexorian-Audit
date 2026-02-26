@@ -23,7 +23,7 @@ The following scripted demonstrations will be recorded for institutional review.
 | :--- | :--- | :--- |
 | **01** | *The Genesis Handshake* | Real-time 4096-bit RSA audit logs. |
 | **02** | *Live Stress: CT-09* | Terminal view of the energy depletion plateau. |
-| **03** | *Adversarial Denial* | Governance Dashboard alerting on a simulated bypass attempt. |
+| **03** | *Adversarial Denial* | Governance Dashboard alerting on an actual bypass attempt. |
 | **04** | *Audit Finality* | Exporting the regulator-ready Merkle proof live. |
 
 ---
