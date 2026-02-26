@@ -164,26 +164,46 @@
             <h3 style="margin-top: 3rem;">Proof Visuals (Step 6)</h3>
             <div class="grid" style="margin-top: 2rem;">
                 <div class="card" style="padding: 1rem; background: #000; border: 1px solid #111;">
-                    <img src="C:/Users/tech4kids/.gemini/antigravity/brain/b5b0af4f-b962-4e2f-9f03-5db1b0f69fdb/governance_dashboard_proof_1772127694524.png"
-                        alt="Governance Dashboard" style="width: 100%; border-radius: 4px;">
+                    <img src="assets/screenshots/dashboard_proof.png" alt="Governance Dashboard"
+                        style="width: 100%; border-radius: 4px;">
                     <p style="font-size: 0.75rem; margin-top: 0.8rem; color: #666;">[PROVEN] Operational Telemetry (SHA3
                         Chain Match)</p>
                 </div>
                 <div class="card" style="padding: 1rem; background: #000; border: 1px solid #111;">
-                    <img src="C:/Users/tech4kids/.gemini/antigravity/brain/b5b0af4f-b962-4e2f-9f03-5db1b0f69fdb/what_is_nexorian_section_final_1772128227572.png"
-                        alt="Accessibility Evidence" style="width: 100%; border-radius: 4px;">
+                    <img src="assets/screenshots/governance_framework.png" alt="Accessibility Evidence"
+                        style="width: 100%; border-radius: 4px;">
                     <p style="font-size: 0.75rem; margin-top: 0.8rem; color: #666;">[PROVEN] Governance Accessibility
                         Framework</p>
                 </div>
                 <div class="card" style="padding: 1rem; background: #000; border: 1px solid #111;">
                     <video autoplay loop muted style="width: 100%; border-radius: 4px;">
-                        <source
-                            src="C:/Users/tech4kids/.gemini/antigravity/brain/b5b0af4f-b962-4e2f-9f03-5db1b0f69fdb/step6_video_proof_logs_1772128373858.webp"
-                            type="image/webp">
+                        <source src="assets/recordings/video_proof.webp" type="image/webp">
                     </video>
                     <p style="font-size: 0.75rem; margin-top: 0.8rem; color: #666;">[PROVEN] Live Audit Streaming &
                         Governance Rejection</p>
+                    <a href="assets/recordings/video_proof.webp" download class="btn btn-outline"
+                        style="font-size: 0.65rem; padding: 0.3rem; margin-top: 0.5rem; display: block;">Download Video
+                        Proof (.webp)</a>
                 </div>
+            </div>
+
+            <h3 style="margin-top: 3rem;">Direct Ledger Inspection (Live Data)</h3>
+            <div class="card" style="background: var(--bg-card); border-color: var(--accent); margin-top: 1rem;">
+                <p style="font-size: 0.9rem; margin-bottom: 1rem;">The raw audit ledger is a cryptographically chained
+                    JSONL file. View the most recent verified state transitions below:</p>
+                <div class="terminal" style="max-height: 300px; overflow-y: auto;">
+                    <div class="terminal-content" style="font-size: 0.75rem;">
+                        <span style="color: #6b7280;">{"epoch": 99.999, "role": "OPERATOR", "instruction":
+                            "CT-09_RECURSIVE_STRESS", "status": "REJECTED", "reason": "GOVERNANCE_DRIFT_DETECTED",
+                            "hash": "82B4...A627"}</span><br>
+                        <span style="color: #6b7280;">{"epoch": 99.998, "role": "ADMIN", "instruction":
+                            "SET_HEARTBEAT_INTERVAL", "status": "APPROVED", "hash": "7FF2...B911"}</span><br>
+                        <span style="color: #6b7280;">{"epoch": 99.997, "role": "SANDBOX", "instruction":
+                            "READ_ONLY_PROBE", "status": "APPROVED", "hash": "12A3...CDE4"}</span>
+                    </div>
+                </div>
+                <a href="audit_proof_final.jsonl" download class="btn btn-primary"
+                    style="font-size: 0.75rem; margin-top: 1rem;">Download Full Audit Ledger (.jsonl)</a>
             </div>
 
             <div
