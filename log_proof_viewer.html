@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Nexorian Log Stream (Step 6 Proof)</title>
+    <style>
+        body {
+            background: #000;
+            color: #10b981;
+            font-family: 'JetBrains Mono', monospace;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .entry {
+            margin-bottom: 0.5rem;
+            border-left: 2px solid #333;
+            padding-left: 1rem;
+        }
+
+        .rejection {
+            color: #ef4444;
+            font-weight: bold;
+        }
+
+        .header {
+            color: #d4af37;
+            border-bottom: 1px solid #222;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">NEXORIAN SYSTEM LOGS — STEP 6 VERIFICATON — NO DRIFT MODE</div>
+    <div id="log-container"></div>
+
+    <script>
+        // Reading from the stress test output to simulate live stream
+        const rawLogs = [
+            '{"ts": 1772128344.956, "epoch": 0.0, "action": "GENESIS_ANCHOR", "actor": "SYSTEM", "payload": {"msg": "Epoch 0 Initialized"}}',
+            '{"ts": 1772128344.960, "epoch": 10.0, "action": "INGRESS_APPROVED", "actor": "GATEWAY", "payload": {"task": "StressTask_1"}}',
+            '{"ts": 1772128344.965, "epoch": 150.0, "action": "REJECTION", "actor": "DCE", "payload": {"reason": "Constraint Violated: epoch <= 100", "actor_role": "OPERATOR"}}',
+            '{"ts": 1772128344.970, "epoch": 1.0, "action": "REJECTION", "actor": "DCE", "payload": {"reason": "Constraint Violated: actor_role == OPERATOR", "actor_role": "GUEST"}}',
+            '[SUCCESS] SYSTEM STABLE. Integrity Verified via SHA3-256.'
+        ];
+
+        const container = document.getElementById('log-container');
+        let i = 0;
+        function addLog() {
+            if (i < rawLogs.length) {
+                const div = document.createElement('div');
+                div.className = 'entry' + (rawLogs[i].includes('REJECTION') ? ' rejection' : '');
+                div.textContent = rawLogs[i];
+                container.appendChild(div);
+                i++;
+                setTimeout(addLog, 1500);
+            }
+        }
+        addLog();
+    </script>
+</body>
+
+</html>

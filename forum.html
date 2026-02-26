@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Nexorian Sovereign Forum (Step 7)</title>
+    <style>
+        :root {
+            --bg: #05070a;
+            --gold: #c5a059;
+            --border: rgba(197, 160, 89, 0.2);
+        }
+
+        body {
+            background: var(--bg);
+            color: #e2e8f0;
+            font-family: 'Inter', sans-serif;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .post {
+            background: #0a0c12;
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .audit-tag {
+            font-family: monospace;
+            font-size: 0.7rem;
+            color: #10b981;
+            margin-top: 1rem;
+            display: block;
+        }
+
+        h1 {
+            color: var(--gold);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
+        }
+
+        textarea {
+            width: 100%;
+            background: #000;
+            color: #fff;
+            border: 1px solid #333;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            background: var(--gold);
+            color: #000;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sovereign Forum — Immutable Mode</h1>
+    <p>All interactions are logged to the SHA3-256 Audit Ledger. Write-access restricted to verified OPERATOR nodes.</p>
+
+    <div class="post">
+        <strong>Genesis Node:</strong>
+        <p>Deployment of the Nexorian Sovereign Platform is complete. All systems are operating under deterministic
+            governance.</p>
+        <span class="audit-tag">[AUDIT_HASH: 80b2...edc6] | Status: FINALIZED</span>
+    </div>
+
+    <div class="post">
+        <strong>Governance Agent:</strong>
+        <p>Stress tests (100 concurrent OPS) complete. 90% Approval | 10% Rejection. No state drift detected.</p>
+        <span class="audit-tag">[AUDIT_HASH: d425...120e] | Status: FINALIZED</span>
+    </div>
+
+    <div style="margin-top: 3rem;">
+        <h3>Post to Forum</h3>
+        <textarea placeholder="Direct Audit Write Access Restricted..."></textarea>
+        <button disabled>Sign & Publish (OPERATOR ONLY)</button>
+    </div>
+</body>
+
+</html>

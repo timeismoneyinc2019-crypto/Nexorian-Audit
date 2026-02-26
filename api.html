@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexorian — Open API & Developer Portal</title>
+    <style>
+        :root {
+            --accent: #d4af37;
+            --bg: #07090f;
+            --bg-alt: #0a0e17;
+            --card: #0f131f;
+            --border: #1e293b;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1.5rem;
+            background: rgba(7, 9, 15, 0.95);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 2rem;
+        }
+
+        .api-block {
+            background: #000;
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #10b981;
+            margin-bottom: 2rem;
+            overflow-x: auto;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            margin-top: 3rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="governance.html">Governance</a>
+        <a href="api.html">Developer API</a>
+    </nav>
+
+    <div class="container">
+        <h1>Developer API Portal</h1>
+        <p>Authorized external systems can submit queries and tasks to the Nexus-Genesis Kernel and receive
+            cryptographically verifiable results. Full documentation is accessible through the secure developer portal.
+        </p>
+
+        <h2>Submit Execution Payload</h2>
+        <div class="api-block">
+            POST /api/v1/execute
+            {
+            "epoch_limit": 10,
+            "law_envelope_id": "LAW_01_GENESIS",
+            "payload": {
+            "action": "QUERY_STATE",
+            "parameters": { "target": "LEDGER_SUMMARY" }
+            },
+            "signature": "0x4F2A..."
+            }
+        </div>
+
+        <h2>API Constraints</h2>
+        <ul>
+            <li><strong>Authentication</strong>: Requires valid RSA-4096 handshake.</li>
+            <li><strong>Determinism</strong>: All outputs are immutable once calculated.</li>
+            <li><strong>Audit</strong>: Every call consumes Epochs and is logged to the corporate ledger.</li>
+        </ul>
+    </div>
+</body>
+
+</html>

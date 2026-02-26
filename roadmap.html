@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexorian — Public Roadmap</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Assuming a shared styles file eventually -->
+    <style>
+        :root {
+            --accent: #d4af37;
+            --bg: #07090f;
+            --bg-alt: #0a0e17;
+            --card: #0f131f;
+            --border: #1e293b;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1.5rem;
+            background: rgba(7, 9, 15, 0.95);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--accent);
+        }
+
+        .roadmap-item {
+            border-left: 2px solid var(--accent);
+            padding-left: 2rem;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .roadmap-item::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .epoch-label {
+            color: var(--accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="governance.html">Governance</a>
+        <a href="api.html">Developer API</a>
+    </nav>
+
+    <div class="container">
+        <h1>Public Roadmap</h1>
+
+        <div class="roadmap-item">
+            <span class="epoch-label">Q1 — Genesis Release</span>
+            <h2>Sandbox Kernel Public Release</h2>
+            <p>Launch of the limited-access Sandbox Kernel for public evaluation and adversary stress-testing.
+                Verification of 100-Epoch limits in deterministic environments.</p>
+        </div>
+
+        <div class="roadmap-item">
+            <span class="epoch-label">Q2 — Corporate Scaling</span>
+            <h2>Enterprise Kernel Beta</h2>
+            <p>Rollout of full governance and API integration for authorized institutional clients. Implementation of
+                multi-node Law Envelope coordination.</p>
+        </div>
+
+        <div class="roadmap-item">
+            <span class="epoch-label">Q3 — Ecosystem Expansion</span>
+            <h2>Open API & Governance Portal</h2>
+            <p>Official launch of the secure developer portal and programmatic access for compliant systems. Full TLA+
+                specification availability for Tier 2 clients.</p>
+        </div>
+
+        <div class="roadmap-item">
+            <span class="epoch-label">Q4 — Sovereign Autonomy</span>
+            <h2>Advanced AI Module Integration</h2>
+            <p>Full integration of the R&D and Red Team environments for sovereign corporate strategy and defensive
+                hardening.</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexorian Governance Dashboard</title>
+    <style>
+        :root {
+            --bg: #05070a;
+            --gold: #c5a059;
+            --border: rgba(197, 160, 89, 0.2);
+        }
+
+        body {
+            background: var(--bg);
+            color: #e2e8f0;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: rgba(10, 12, 18, 0.95);
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .metric {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .log {
+            background: #000;
+            padding: 1rem;
+            height: 300px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 0.8rem;
+            color: #888;
+            border: 1px solid #111;
+        }
+
+        .status-ok {
+            color: #10b981;
+        }
+
+        .status-reject {
+            color: #ef4444;
+        }
+    </style>
+</head>
+
+<body>
+    <header style="margin-bottom: 3rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem;">
+        <h1>Nexorian Governance Dashboard</h1>
+        <p>Operational Telemetry — Epoch 1.0 (Phase: Implementation Lock)</p>
+    </header>
+
+    <div class="grid">
+        <div class="card">
+            <h3>System Integrity</h3>
+            <div class="metric status-ok">VERIFIED</div>
+            <p>Cryptographic Chain: <span style="font-family: monospace; font-size: 0.7rem;">80b2...edc6</span></p>
+        </div>
+        <div class="card">
+            <h3>Execution Rejections</h3>
+            <div class="metric status-reject">10</div>
+            <p>10 Load Violations (Concurrent Stress)</p>
+        </div>
+        <div class="card">
+            <h3>Active Envelopes</h3>
+            <div class="metric">4</div>
+            <p>FINRA_CT_09, HIPAA_PHI_v1, ARBITER_v2</p>
+        </div>
+    </div>
+
+    <div class="card" style="margin-top: 2rem;">
+        <h3>Real-time Audit Ledger (Stress Test Capture)</h3>
+        <div id="audit-log" class="log">
+            [2026-02-26 11:50:45] INFO: GENESIS_ANCHOR Initialized. Hash: 80b2...edc6<br>
+            [2026-02-26 11:51:00] EXEC: StressTask_0 START [VALIDATED]<br>
+            [2026-02-26 11:51:02] EXEC: StressTask_1 START [VALIDATED]<br>
+            <span class="status-reject">[2026-02-26 11:51:05] CRITICAL: REJECTION - Constraint Violated: epoch <= 100
+                    (Request: 150.0)</span><br>
+                    [2026-02-26 11:51:10] EVENT: ADVERSARIAL_PROBE - Role GUEST rejected for CoreWrite.<br>
+                    <br>
+                    --- END OF STREAM: Integrity Verified via SHA3-256 ---
+        </div>
+    </div>
+</body>
+
+</html>

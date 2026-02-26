@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexorian — Governance & The Law Envelope</title>
+    <style>
+        :root {
+            --accent: #d4af37;
+            --bg: #07090f;
+            --bg-alt: #0a0e17;
+            --card: #0f131f;
+            --border: #1e293b;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1.5rem;
+            background: rgba(7, 9, 15, 0.95);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 2rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .logic-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .logic-step {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .number {
+            background: var(--accent);
+            color: #000;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        code {
+            background: #000;
+            color: #10b981;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="governance.html">Governance</a>
+        <a href="api.html">Developer API</a>
+    </nav>
+
+    <div class="container">
+        <h1>Governance & Determinism</h1>
+
+        <div class="section">
+            <h2>The Law Envelope</h2>
+            <p>At the center of Nexorian governance is the <strong>Law Envelope</strong>. Unlike standard AI alignment
+                that relies on text-based prompts or post-hoc filters, the Law Envelope is a cryptographic boundary that
+                wraps the execution kernel from the bottom up.</p>
+        </div>
+
+        <div class="section">
+            <h2>Admissibility Logic</h2>
+            <div class="logic-card">
+                <div class="logic-step">
+                    <div class="number">1</div>
+                    <div>
+                        <strong>Input Validation</strong>: Data enters via the Admissibility Gate.
+                    </div>
+                </div>
+                <div class="logic-step">
+                    <div class="number">2</div>
+                    <div>
+                        <strong>Cryptographic Check</strong>: The Law Envelope verifies the instruction against
+                        predefined deterministic bounds.
+                    </div>
+                </div>
+                <div class="logic-step">
+                    <div class="number">3</div>
+                    <div>
+                        <strong>Deterministic Execution</strong>: Instruction is processed by the Kernel only if
+                        <code>admissible=True</code>.
+                    </div>
+                </div>
+                <div class="logic-step">
+                    <div class="number">4</div>
+                    <div>
+                        <strong>Immutable Audit</strong>: The state transition is logged to the SHA3-256 ledger.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Audit Trails</h2>
+            <p>Every execution step is logged and verifiable. In the event of an investigation or regulatory audit,
+                Nexorian provides a full chain of state hashes, proving that the system operated within its legal
+                mandate at every Epoch.</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexorian Developer Portal</title>
+    <style>
+        :root {
+            --bg: #05070a;
+            --gold: #c5a059;
+            --border: rgba(197, 160, 89, 0.2);
+        }
+
+        body {
+            background: var(--bg);
+            color: #e2e8f0;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        .card {
+            background: rgba(10, 12, 18, 0.95);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        h1,
+        h2 {
+            color: var(--gold);
+            text-transform: uppercase;
+        }
+
+        pre {
+            background: #000;
+            padding: 1rem;
+            border: 1px solid #111;
+            overflow-x: auto;
+            color: #10b981;
+        }
+
+        .tag {
+            background: #333;
+            color: var(--gold);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Nexorian Developer Console <span class="tag">v0.1-Alpha</span></h1>
+
+    <div class="card">
+        <h2>Integration Guide: Python SDK</h2>
+        <p>Ensure you are running within a deterministic epoch boundary.</p>
+        <pre>
+from nexorian import NexusKernel
+
+# Initialize with Institutional Anchor
+kernel = NexusKernel(api_key="NEX-...", domain="governance.local")
+
+# Execute under FINRA Law Envelope
+response = kernel.execute(
+    task="AssetAllocation",
+    envelope="FINRA_CT_09",
+    params={"epoch": 50.0, "amount": 10000}
+)
+
+print(response.audit_hash)
+        </pre>
+    </div>
+
+    <div class="card">
+        <h2>Active API Endpoints (Read-Only)</h2>
+        <p>GET <code>/v1/audit/ledger</code> - Streaming execution proofs.</p>
+        <p>GET <code>/v1/governance/envelopes</code> - View active business rules.</p>
+    </div>
+</body>
+
+</html>

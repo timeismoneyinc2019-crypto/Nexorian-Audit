@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE CAULDRON — Founder's Gated Access</title>
+    <style>
+        :root {
+            --bg: #07090f;
+            --gold: #c5a059;
+            --border: rgba(197, 160, 89, 0.2);
+            --card-bg: rgba(10, 12, 18, 0.95);
+        }
+
+        body {
+            background-color: var(--bg);
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            /* Restored scrolling */
+        }
+
+        #gate {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--bg);
+            z-index: 1000;
+        }
+
+        .gate-card {
+            text-align: center;
+            border: 1px solid var(--border);
+            padding: 4rem;
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border-radius: 8px;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+        }
+
+        h1 {
+            color: var(--gold);
+            letter-spacing: 0.3rem;
+            text-transform: uppercase;
+        }
+
+        input {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            color: white;
+            padding: 1rem;
+            width: 280px;
+            margin-top: 2rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        button {
+            background: var(--gold);
+            color: black;
+            border: none;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            margin-top: 1.5rem;
+            font-weight: 800;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px var(--gold);
+        }
+
+        #dashboard {
+            display: none;
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(5, 7, 12, 0.9);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            z-index: 900;
+        }
+
+        nav a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-left: 2rem;
+        }
+
+        .module {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+
+        .status {
+            color: #00ff00;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: bold;
+        }
+
+        .log-vessel {
+            background: #000;
+            padding: 1.5rem;
+            height: 200px;
+            overflow-y: auto;
+            font-family: 'JetBrains Mono', monospace;
+            color: #888;
+            margin-top: 1rem;
+            border: 1px solid #111;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .media-item {
+            background: #000;
+            padding: 1rem;
+            border: 1px solid #222;
+            border-radius: 4px;
+        }
+
+        img,
+        video {
+            width: 100%;
+            border-radius: 2px;
+            display: block;
+        }
+
+        /* Standard Scrollbars */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #05070a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--gold);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="gate">
+        <div class="gate-card">
+            <h1>THE CAULDRON</h1>
+            <p style="color: #666; margin-top: 0.5rem;">Founder Verification Required</p>
+            <input type="password" id="pass" placeholder="Enter Access Handshake">
+            <br>
+            <button onclick="unlock()">Unlock Private Layer</button>
+        </div>
+    </div>
+
+    <nav id="dash-nav" style="display: none;">
+        <span style="color: var(--gold); font-weight: 900; letter-spacing: 2px;">NEXORIAN DASHBOARD</span>
+        <div>
+            <a href="index.html">Public Site</a>
+            <a href="docs/NEXORIAN_WHITEPAPER_v1.md" target="_blank">Whitepaper</a>
+            <a href="docs/NEXORIAN_DETERMINISM_THESIS.md" target="_blank">The Thesis</a>
+        </div>
+    </nav>
+
+    <div id="dashboard">
+        <header style="margin-bottom: 4rem; padding-top: 2rem;">
+            <h1 style="font-size: 2.5rem; border-left: 4px solid var(--gold); padding-left: 1.5rem;">Operational Status:
+                Genesis Wave</h1>
+            <p style="color: #888; margin-top: 1rem;">Founder's Private Monitoring Interface. All modules ARMED.</p>
+        </header>
+
+        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem;">
+            <!-- Left Column: Status & Advisory -->
+            <div>
+                <div class="module">
+                    <h3>R&D AI Research Team</h3>
+                    <p>Sub-Units: <span class="status">CORTEX, NEURON, SYNAPSE</span></p>
+                    <p>Current Objective: <span style="color: var(--gold);">Global Dispatch Harmonization</span></p>
+                    <div class="log-vessel">
+                        [00:01] Genesis Trigger Confirmed...<br>
+                        [00:02] Anchoring SMTP Credentials (MRE Masking)...<br>
+                        [00:05] Wave 1 Dispatch Initiated: [13/745] Success.<br>
+                        [00:08] Monitoring Bounce-back Telemetry...<br>
+                        [00:10] Adjusting Entropic Delay: [10s] Constant.<br>
+                        [00:12] No blocking signals detected from Google SMTP.<br>
+                        [00:15] Standing by for Wave 2 Command.
+                    </div>
+                </div>
+
+                <div class="module">
+                    <h3>Red Team Simulation</h3>
+                    <p>Mode: <span style="color: #ef4444;">ACTIVE ADVERSARIAL</span></p>
+                    <div class="log-vessel" style="height: 150px;">
+                        [00:05] Simulated Packet Injection: DROP<br>
+                        [00:07] Shadow Directory Probe: BLOCKED<br>
+                        [00:10] Clock Skew Manipulation: REJECTED<br>
+                        [00:15] Integrity Score: 100.00%
+                    </div>
+                </div>
+
+                <div class="module">
+                    <h3>Breeze Strategic Advisory</h3>
+                    <p
+                        style="font-style: italic; color: #aaa; border-left: 2px solid var(--gold); padding-left: 1rem; margin-top: 1rem;">
+                        "The media blitz has begun. First institutional responses expected within 48h. UI stabilized;
+                        layout is locked. Ready for next directive."
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Column: Media & Infrastructure -->
+            <div>
+                <div class="module">
+                    <h3>Verification Media: Defense Chronology</h3>
+                    <div class="media-grid">
+                        <div class="media-item">
+                            <h4 style="margin-bottom: 0.5rem; font-size: 0.8rem; color: var(--gold);">Kernel Stress Test
+                                (Audit)</h4>
+                            <img src="assets/recordings/kernel_stress_test.png" alt="Kernel Stress Test">
+                            <p style="font-size: 0.7rem; color: #666; margin-top: 0.5rem;">Verified CT-09 execution
+                                refusal.</p>
+                        </div>
+                        <div class="media-item">
+                            <h4 style="margin-bottom: 0.5rem; font-size: 0.8rem; color: var(--gold);">Deterministic Halt
+                                Proof</h4>
+                            <img src="assets/recordings/deterministic_halt.png" alt="Deterministic Halt">
+                            <p style="font-size: 0.7rem; color: #666; margin-top: 0.5rem;">NEX-501 Energy Exhaustion
+                                (SHA3 Match).</p>
+                        </div>
+                        <div class="media-item">
+                            <h4 style="margin-bottom: 0.5rem; font-size: 0.8rem; color: var(--gold);">Acquisition Flow
+                                (Video)</h4>
+                            <video autoplay loop muted controls>
+                                <source src="assets/recordings/test_flow.webp" type="image/webp">
+                            </video>
+                            <p style="font-size: 0.7rem; color: #666; margin-top: 0.5rem;">Founder's direct acquisition
+                                verification.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <h3>Production Infrastructure</h3>
+                    <div style="background: #000; padding: 1.5rem; border: 1px solid #111;">
+                        <p style="font-size: 0.8rem; margin-bottom: 0.5rem;">PRIMARY_NODE: <span
+                                style="font-family: monospace;">104.236.96.55</span></p>
+                        <p style="font-size: 0.8rem; margin-bottom: 1rem;">WEBHOOK_ENDPOINT: <span
+                                style="font-family: monospace;">/webhooks/stripe</span></p>
+                        <hr style="border: 0; border-top: 1px solid #222; margin-bottom: 1rem;">
+                        <span class="status" style="font-size: 0.7rem;">[WEBHOOK_ARMED]</span>
+                        <span class="status"
+                            style="font-size: 0.7rem; color: var(--gold); margin-left:1rem;">[SIGNING_SECRET_ANCHORED]</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button style="background: #111; color: #444; margin-top: 4rem;" onclick="location.reload()">Lock System
+            Access</button>
+    </div>
+
+    <script>
+        function unlock() {
+            const pass = document.getElementById('pass').value;
+            if (pass === 'genesis') {
+                document.getElementById('gate').style.display = 'none';
+                document.getElementById('dashboard').style.display = 'block';
+                document.getElementById('dash-nav').style.display = 'flex';
+                document.body.style.overflowY = 'auto'; // Force scroll
+            } else {
+                alert('Verification Failed.');
+            }
+        }
+    </script>
+</body>
+
+</html>
