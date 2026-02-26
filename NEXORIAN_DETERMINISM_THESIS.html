@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Calculus of Deterministic Governance | Dennis Merritt</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px;
+            background: #fff;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: #111;
+            margin-bottom: 10px;
+        }
+
+        .author {
+            font-variant: small-caps;
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .abstract {
+            background: #f9f9f9;
+            padding: 30px;
+            border-left: 5px solid #c5a059;
+            margin: 40px 0;
+            font-style: italic;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 50px;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        .citation {
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 60px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        @media print {
+            body {
+                padding: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>The Calculus of Deterministic Governance</h1>
+        <div class="author">Dennis Merritt</div>
+        <div style="font-size: 0.9rem; color: #999; margin-top: 10px;">Nexorian Research Institute | February 2026</div>
+    </header>
+
+    <div class="abstract">
+        <strong>Abstract:</strong> This thesis introduces a formal mathematical framework for "Law Envelopes" as a
+        thermodynamic barrier against stochastic drift in autonomous systems. By shifting governance from probabilistic
+        application-layer guards to kernel-layer deterministic predicates, we define a new class of computation where
+        rule violation is not merely forbidden but physical impossible within the execution environment.
+    </div>
+
+    <h2>I. Introduction: The Stochastic Fallacy</h2>
+    <p>The contemporary landscape of Artificial Intelligence is dominated by probabilistic models. Large Language Models
+        (LLMs) operate on a basis of high-dimensional "guessing," where the output is a statistical approximation of
+        truth. In high-consequence environments—banking, national defense, medical orchestration—the margin for
+        stochastic error is zero. Yet, current "safety" frameworks rely on secondary filters (Prompt Engineering, RLHF)
+        that are inherently bypassable. We propose that true governance must be <strong>deterministic</strong>, not
+        probabilistic.</p>
+
+    <h2>II. The Law Envelope Predicate Logic</h2>
+    <p>We define the <em>Law Envelope</em> ($E$) as a set of non-negotiable predicates ($P$) that guard every state
+        transition ($S_n \to S_{n+1}$). In the Nexorian model, an instruction ($I$) is processed only if $\forall p \in
+        E, p(S_n, I) = 1$. If any predicate fails, the transition is physically blocked at the hardware interrupt level.
+        This ensures that the system state space is pruned of all non-compliant outcomes before execution energy is even
+        allocated.</p>
+
+    <h2>III. Thermodynamic Accounting (Epochs)</h2>
+    <p>Traditional compute uses abstract tokens or time-outs. Nexorian introduces <em>Thermodynamic Epochs</em>, a unit
+        of compute physically bound to the hardware entropy. By pre-allocating an Epoch limit to any agentic task, we
+        create a mathematical ceiling for recursive reasoning. When the Epoch limit is hit, the system halts. This
+        prevents "runaway" AI reasoning and ensures that energy expenditure is directly proportional to governed
+        outcomes.</p>
+
+    <h2>IV. Conclusion: Sovereignty through Constraint</h2>
+    <p>Autonomy without constraint is liability. Sovereignty, in the digital age, is the ability to guarantee specific
+        outcomes under all environmental conditions. Nexorian provides this guarantee by making the Law Envelope the
+        fundamental boundary of the digital universe. We are not building agents that <em>want</em> to follow the rules;
+        we are building agents that <em>have</em> to.</p>
+
+    <div class="citation">
+        &copy; 2026 Dennis Merritt. This document is a Master Release of the Nexorian Research Institute. <br>
+        SHA256: 3820...16c4 | CC BY-NC-ND 4.0
+    </div>
+</body>
+
+</html>
