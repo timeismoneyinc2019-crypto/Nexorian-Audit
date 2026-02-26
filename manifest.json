@@ -1,9 +1,11 @@
-﻿{
-    "index.html":  "73af7c185a3191bcd89150d21c5698f2c9d61c9d3154197adba99fdd21b92477",
-    "stress_test_results.jsonl":  "28d4d28a3163c0dceb2cbb27479344bced2468f953baa91322052198bc44ba43",
-    "audit_proof_final.jsonl":  "ee8d42e3ddb006a5b735d8d6979967e81d0aa6db93543ab0d7d3a7c9f1db4dbb",
-    "DOCKER_EVAL_ENV.md":  "a77d715a0cf4fb56954ced900fe152388df3656f11267b0c56d0aef4bc749637",
-    "docs/THESIS_DETERMINISTIC_GOVERNANCE.md":  "5a0c7835e6c287e7aa9d87259eb1dd4247d00087e134623505baf80dc372e412",
-    "docs/WHITE_PAPER_ENTERPRISE.md":  "9c8d69dfeb66f0cead4cdb8b5e85aea3ad947fbed896d0fb3da6f47ba43a2e45",
-    "AUDIT_ATTESTATION.md":  "3dc67f49ef3da61dcf08413a8a410e7f03f7ee40429e8e0084ea054b4b6e7dab"
+{
+    "AUDIT_ATTESTATION.md": "3dc67f49ef3da61dcf08413a8a410e7f03f7ee40429e8e0084ea054b4b6e7dab",
+    "DOCKER_EVAL_ENV.md": "a77d715a0cf4fb56954ced900fe152388df3656f11267b0c56d0aef4bc749637",
+    "index.html": "1c17725cb9bf50e2825053798b8c7fc3fe4523592afff2c9b1b72e962f23fdd4",
+    "docs/WHITE_PAPER_ENTERPRISE.md": "9c8d69dfeb66f0cead4cdb8b5e85aea3ad947fbed896d0fb3da6f47ba43a2e45",
+    "docs/THESIS_DETERMINISTIC_GOVERNANCE.md": "5a0c7835e6c287e7aa9d87259eb1dd4247d00087e134623505baf80dc372e412",
+    "audit_proof_final.jsonl": "ee8d42e3ddb006a5b735d8d6979967e81d0aa6db93543ab0d7d3a7c9f1db4dbb",
+    "stress_test_results.jsonl": "28d4d28a3163c0dceb2cbb27479344bced2468f953baa91322052198bc44ba43",
+    "REPRODUCIBILITY_GUIDE.md": "5d625a2718c9418ea853da506a237f5370b5c6a088d542827fc4c04ed400798d",
+    "ANNOUNCEMENT_v1.md": "d1e30f2464377509678e8659fbe8b82f7604affbf539c825c843cd732d0d9dd0"
 }
