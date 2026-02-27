@@ -2,7 +2,7 @@
 
 This breakdown provides the serialized work items for the R&D AI Engineering Team to execute the platform build.
 
-## Epic 1: Nexus-Genesis Infrastructure (Deterministic Core)
+## Epic 1: TIME Kernel Infrastructure (Deterministic Core)
 - **NEX-001**: Implement Merkle-tree based Audit Ledger (Backend).
 - **NEX-002**: Design TEE-isolated VM enclave for Root Kernel.
 - **NEX-003**: Implement "Epoch" energy tracking in the execution engine.

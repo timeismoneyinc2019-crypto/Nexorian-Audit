@@ -2,7 +2,7 @@
 ## Procurement Data Sheet & Security Controls Mapping
 
 ### 1. Architecture Description
-The Nexorian platform utilizes a **Nexus-Genesis Kernel** to partition agentic logic from governance enforcement. Enforcement is handled by the **Deterministic Compliance Engine (DCE)** which operates inside a **Law Envelope** boundary.
+The Nexorian platform utilizes a **TIME Kernel Kernel** to partition agentic logic from governance enforcement. Enforcement is handled by the **Deterministic Compliance Engine (DCE)** which operates inside a **Law Envelope** boundary.
 
 ### 2. Security Controls Mapping (Enterprise Standards)
 | Control Category | Nexorian Implementation | Standard Mapping |

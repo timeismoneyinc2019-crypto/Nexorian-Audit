@@ -1,13 +1,13 @@
 # Nexorian Enterprise Platform: Platform Architecture Overview (Deliverable 1)
 
 ## 1. Executive Macro-Architecture
-The Nexorian Platform is designed as a **Sovereign Deterministic Mesh**. It separates the "Interface Plane" (User/Dev Interaction) from the "Enforcement Plane" (The Nexus-Genesis Kernel).
+The Nexorian Platform is designed as a **Sovereign Deterministic Mesh**. It separates the "Interface Plane" (User/Dev Interaction) from the "Enforcement Plane" (The TIME Kernel Kernel).
 
 ### 1.1 Logical Tiers
 - **Presentation Layer**: Next.js (SSG/SSR) with TailwindCSS for the Enterprise Portal and Developer Console.
 - **Gateway Layer**: Kong or NGINX with custom Lua modules for deterministic request signing and rate-limiting.
 - **Service Layer**: Distributed Microservices (Golang/Python) for Identity, Audit, and Rule Authoring.
-- **Enforcement Layer (The Kernel)**: The Nexus-Genesis Kernel, running in hardened TEE (Trusted Execution Environments) or isolated VM enclaves.
+- **Enforcement Layer (The Kernel)**: The TIME Kernel Kernel, running in hardened TEE (Trusted Execution Environments) or isolated VM enclaves.
 
 ## 2. Identity & Governance (RBAC + ABAC)
 Nexorian utilizes a dual-layer security model:

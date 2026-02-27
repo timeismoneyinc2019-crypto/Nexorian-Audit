@@ -8,7 +8,7 @@
 ---
 
 ### 1. ABSTRACT
-Nexorian introduces the world's first hardware-bound, deterministic governance kernel. By eliminating the probabilistic "drift" inherent in traditional AI and cloud orchestration, Nexorian ensures that agentic behavior is physically constrained by a immutable "Law Envelope." This paper details the architecture of the Nexus-Genesis Kernel, the Admissibility Gate enforcement methodology, and the cryptographically chained audit trails that enable 100% third-party verifiability.
+Nexorian introduces the world's first hardware-bound, deterministic governance kernel. By eliminating the probabilistic "drift" inherent in traditional AI and cloud orchestration, Nexorian ensures that agentic behavior is physically constrained by a immutable "Law Envelope." This paper details the architecture of the TIME Kernel Kernel, the Admissibility Gate enforcement methodology, and the cryptographically chained audit trails that enable 100% third-party verifiability.
 
 ### 2. THE CRISIS OF PROBABILISTIC GOVERNANCE
 Current AI governance relies on "alignment" (probabilistic) or "monitoring" (reactive). Both fail at scale. 
@@ -41,7 +41,7 @@ Nexorian provides unique transparency through:
 | **Consensus Clash** | Conflicting Law Envelopes | VERIFIED NO-OP | `SHA256:b1d90a...` |
 
 ### 7. CONCLUSION
-Nexorian transforms governance from a policy document into a mathematical certainty. The v1.0.0 release represents the final implementation lock of the Nexus-Genesis Kernel.
+Nexorian transforms governance from a policy document into a mathematical certainty. The v1.0.0 release represents the final implementation lock of the TIME Kernel Kernel.
 
 ---
 **[VERIFICATION REGISTRY]**

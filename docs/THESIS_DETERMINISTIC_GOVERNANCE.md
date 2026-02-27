@@ -23,4 +23,4 @@ Through exhaustive stress testing (Scenario A-D), Nexorian demonstrated 100% adh
 - **Verification Integrity**: 100% (SHA-256 validated)
 
 ### V. CONCLUSION
-Sovereignty in AI must be anchored in the kernel. The Nexus-Genesis realization provides a formal, verifiable, and immutable proof of this concept.
+Sovereignty in AI must be anchored in the kernel. The TIME Kernel realization provides a formal, verifiable, and immutable proof of this concept.
