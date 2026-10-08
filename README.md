@@ -1,3 +1,7 @@
+# Nexorian Audit
+
+The nested .sha256 files are hashes of hashes. They show a file was unchanged after it was hashed. They are not an independent audit.
+
 # Nexorian Audit & Evidence Repository (Public)
 ## Procedural Verification Manifest
 
